@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form method="post" action="/predict">
+        <label for="text">Write something :</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if text %}
+    <p>Your Input: {{ text }}</p>
+    <p>Predicted sentiment: {{ sentiment }}</p>
+    {% endif %}
+</body>
+</html>
