@@ -10,10 +10,10 @@ import pickle
 
 app = Flask(__name__)
 
-# Load your trained model
+# Load  trained model
 model = tf.keras.models.load_model('lstm_saved_embd')
 
-# Load your tokenizer
+# Load  tokenizer
 with open('tokenizer_embd.pickle', 'rb') as handle:
         tokenizer = pickle.load(handle)
 

@@ -16,6 +16,8 @@
     {% if text %}
     <p>Your Input: {{ text }}</p>
     <p>Predicted sentiment: {{ sentiment }}</p>
+    <img src="{{ url_for('static', filename=sentiment + '.gif') }}" alt="GIF">
+
     {% endif %}
 </body>
 </html>
