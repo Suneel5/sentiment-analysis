@@ -5,6 +5,8 @@ from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
 import re
 import pickle
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
 # nltk.download('stopwords')
 
 app = Flask(__name__)
