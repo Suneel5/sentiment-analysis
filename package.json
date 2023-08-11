@@ -1,0 +1,19 @@
+{
+        "name": "sentiment-analysis",
+        "version": "1.0.0",
+        "description": "sentiment-analyzer
+        "scripts": {
+        "build": "echo \"No build specified\" && exit 1",
+           "start": "python app.py"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git+https://github.com/Suneel5/sentiment-analysis.git"
+        },
+        "author": "Sunil",
+        "license": "ISC",
+        "bugs": {
+           "url": "https://github.com/Suneel5/sentiment-analysis/issues"
+        },
+        "homepage": "https://github.com/Suneel5/sentiment-analysis#readme"
+}
