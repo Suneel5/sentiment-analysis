@@ -1,10 +1,10 @@
 {
         "name": "sentiment-analysis",
         "version": "1.0.0",
-        "description": "sentiment-analyzer
+        "description": "sentiment-analyzer",
         "scripts": {
-        "build": "echo \"No build specified\" && exit 1",
-           "start": "python app.py"
+       
+         "start": "python app.py"
         },
         "repository": {
             "type": "git",
