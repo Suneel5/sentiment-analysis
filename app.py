@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 import tensorflow as tf
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-import numpy as np
 from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
 import re
