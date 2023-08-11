@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sentiment Analysis App</title>
+    <title>Sentiment Analyzer APP</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-
 </head>
 <body>
-    <h1>Sentiment Analysis</h1>
-    <form method="post" action="/predict">
-        <label for="text">Write something :</label><br>
-        <textarea id="text" name="text" rows="4" cols="50"></textarea><br>
-        <input type="submit" value="Predict">
-    </form>
-    {% if text %}
-    <p>Your Input: {{ text }}</p>
-    <p>Predicted sentiment: {{ sentiment }}</p>
-    <img src="{{ url_for('static', filename=sentiment + '.gif') }}" alt="GIF">
-
-    {% endif %}
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+        <form class="form" action="/predict" method="post">
+            <textarea name="text" placeholder="Enter a text..." rows="4" required></textarea>
+            <button class="button" type="submit">Analyze Sentiment</button>
+        </form>
+        <div class="result">
+            {% if sentiment %}
+            <p>Your text: {{ text }}</p>
+            <p>Sentiment: {{ sentiment }}</p>
+            <img src="{{ url_for('static', filename=sentiment + '.gif') }}" alt="GIF">
+            {% endif %}
+        </div>
+    </div>
 </body>
 </html>

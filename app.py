@@ -31,19 +31,22 @@ def cleaning(text):
     text=' '.join(text)
     return text
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST','GET'])
 def predict():
-    orginal_text = request.form['text']
-    text=cleaning(orginal_text)
-    # Tokenize and pad the input text
-    sequences = tokenizer.texts_to_sequences([text])
-    padded_sequence = pad_sequences(sequences, maxlen=40,padding='pre')
+    if request.method == 'POST':
+        orginal_text = request.form['text']
+        text=cleaning(orginal_text)
+        # Tokenize and pad the input text
+        sequences = tokenizer.texts_to_sequences([text])
+        padded_sequence = pad_sequences(sequences, maxlen=40,padding='pre')
 
-    # Make a prediction using the model
-    prediction = model.predict(padded_sequence)
-    predicted_sentiment = 'Positive' if prediction > 0.5 else 'Negative'
+        # Make a prediction using the model
+        prediction = model.predict(padded_sequence)
+        predicted_sentiment = 'Positive' if prediction > 0.5 else 'Negative'
 
-    return render_template('index.html', text=orginal_text, sentiment=predicted_sentiment)
+        return render_template('index.html', text=orginal_text, sentiment=predicted_sentiment)
+    return render_template('index.html', text=None, sentiment=None)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
