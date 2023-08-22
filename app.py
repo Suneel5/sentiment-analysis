@@ -7,7 +7,7 @@ import re
 import pickle
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
-# nltk.download('stopwords')
+nltk.download('stopwords')
 
 app = Flask(__name__)
 
