@@ -2,7 +2,11 @@
 
 link: https://huggingface.co/spaces/Suneel5/sentiment-analyzer
 
-![App Screenshot](screenshot.png)
+<p float="left">
+  <img src="static/positive.png" width="46%"  height="250" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="static/negative.png" width="46%"  height="250" />
+</p>
 
 ## Overview
 
