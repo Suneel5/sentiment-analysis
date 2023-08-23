@@ -50,7 +50,6 @@ if st.button("Predict"):
 
     # Display result
     # st.subheader("Prediction:")
-    st.write(f" Your Text: {orginal_text}")
     st.write(f"Sentiment: {predicted_sentiment}")
     if sentiment_positive:
         st.image("https://media.giphy.com/media/50fuVHMGUVszu/giphy.gif", width=300)
