@@ -18,8 +18,6 @@ Dataset contains 1.6 Million tweets with label either positive or negative. Data
 ## Objective
 - Analyze sentiment of input text.
 
-## Technical Aspect
-
 ## How to Use
 The Code is written in Python 3.7. If you don't have Python installed you can find it [here](https://www.python.org/downloads/).
 1. To install the required packages and libraries, run this command in the project directory after cloning the repository:
